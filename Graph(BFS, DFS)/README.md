@@ -33,6 +33,8 @@ def iterative_dfs()(start_v):
     return visited
 ```
 
+# DFS -> 백 트랙킹
+
 # BFS
 
 ## 큐를 이용한 반복 구조로 구현
@@ -51,3 +53,11 @@ def iterative_bfs()(grahp, start_v):
             queue.extend(graph[node])
     return visited
 ```
+
+# BFS -> 최고 우선 분기한정법(branch-and-bound)
+
+- BFS 사용
+- 우선 순위 큐를 이용
+- 지금까지 최적 답보다 안 좋은건 검색 X
+- 백트래킹과 달리 가장 유망한 노드부터 검색함
+- 최악의 경우는 지수시간 알고리즘

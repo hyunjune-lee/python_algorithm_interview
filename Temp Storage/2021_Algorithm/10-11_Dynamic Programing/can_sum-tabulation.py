@@ -1,4 +1,4 @@
-# 배열 사용시 1529ms
+# 배열 사용시 1529ms------------------------
 def can_sum(m, nums):
     table = [False for _ in range(m + 1)]
     table[0] = True
@@ -17,9 +17,10 @@ for _ in range(t):
     m, n = map(int, input().split())
     nums = list(map(int, input().split()))
     print(str(can_sum(m, nums)).lower())
+# --------------------------------------------
 
 
-# 배열 사용 + if 조건 분할 안 했을때 2147ms
+# 배열 사용 + if 조건 분할 안 했을때 2147ms---
 def can_sum(m, nums):
     table = [False for _ in range(m + 1)]
     table[0] = True
@@ -38,9 +39,10 @@ for _ in range(t):
     m, n = map(int, input().split())
     nums = list(map(int, input().split()))
     print(str(can_sum(m, nums)).lower())
+# --------------------------------------------
 
 
-# dict 사용시 1787ms
+# dict 사용시 1787ms--------------------------
 # from collections import defaultdict
 
 
@@ -55,3 +57,4 @@ for _ in range(t):
 #                 elif i + num == m:
 #                     return True
 #     return table[m]
+# --------------------------------------------

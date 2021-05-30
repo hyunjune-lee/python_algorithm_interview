@@ -3,9 +3,7 @@ def promising(nums, cur_total, left_total, target_num, idx):
 
 
 def count_sum(nums, cur_total, left_total, target_num, idx):
-
     if promising(nums, cur_total, left_total, target_num, idx):
-
         if cur_total == target_num:
             global sum_case_count
             sum_case_count += 1
@@ -18,7 +16,7 @@ def count_sum(nums, cur_total, left_total, target_num, idx):
 t = int(input())
 for _ in range(t):
     target_num, n = map(int, input().split())
-    nums = sorted(list(map(int, input().split())))
+    nums = sorted(list(map(int, input().split())))  # sort 중요 =>
     sum_case_count = 0
     count_sum(nums, 0, sum(nums), target_num, 0)
     print(sum_case_count)

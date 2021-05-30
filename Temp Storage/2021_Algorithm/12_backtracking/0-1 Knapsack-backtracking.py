@@ -10,6 +10,7 @@ def get_max_profit_by_weight(n, items, limit_w, cur_profit, cur_weight, next_idx
         next_idx += 1
     if next_idx < n:
         bound += (limit_w - total_weight) * (items[next_idx][0] / items[next_idx][1])
+
     return bound
 
 

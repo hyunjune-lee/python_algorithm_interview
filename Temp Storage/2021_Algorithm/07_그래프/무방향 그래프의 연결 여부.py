@@ -1,5 +1,7 @@
 from collections import defaultdict
 
+# 개선 방향 -> 굳이 component를 유지할 필욘 없음
+
 
 def bfs(graph, visited, i):
     visited[i] = True

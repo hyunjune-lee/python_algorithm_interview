@@ -1,6 +1,7 @@
 from collections import defaultdict
 import heapq
-
+# 개선 방향 => visited를 사용해서 방문하지 않은 노드만 넣어주기, 
+# dist 배열을 이용해서 지금까지 구한 거리보다 짧은 경우에만 힙에추가
 
 def dijkstra(edge_pairs, N, S, dest_list):
     graph = defaultdict(list)
@@ -14,6 +15,7 @@ def dijkstra(edge_pairs, N, S, dest_list):
         if node not in dist_list:
             dist_list[node] = dist
             for next_node, add_dist in graph[node]:
+                #
                 alt_dist = dist + add_dist
                 heapq.heappush(heap, (alt_dist, next_node))
 

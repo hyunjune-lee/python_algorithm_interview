@@ -8,6 +8,7 @@ def make_graph(pairs):
     return graph
 
 
+# 개선사항  visitied한 노드가 아닐 때만 dfs 수행
 def is_cycle(N, pairs):
     visited = [False for _ in range(N)]
     graph = make_graph(pairs)

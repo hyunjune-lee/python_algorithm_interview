@@ -1,3 +1,5 @@
+# 처음 시작할때 0에 대한 예외처리를 생각 못했다.
+# 0이 나중에 들어가는 경우, 0이 선행조건일때 순서 조건을 안 걸어야하는 경우 등
 from collections import deque, defaultdict
 
 
@@ -9,10 +11,11 @@ def solution(n, path, order):
         con[u].append(v)
         con[v].append(u)
     for u, v in order:
-        key_dic[u] = v
-        need_visit[v] = 3
-    if need_visit[0] != 1:
-        return False
+        if v == 0:
+            return False
+        elif u != 0:
+            key_dic[u] = v
+            need_visit[v] = 3
     q = deque([0])
     need_visit[0] = 0
     while q:
@@ -25,10 +28,9 @@ def solution(n, path, order):
                     cur_available_node = key_dic[next_node]
                     if need_visit[cur_available_node] == 2:
                         q.append(cur_available_node)
-                        need_visit[cur_available_node] = 1
+                        need_visit[cur_available_node] = 0
                     else:
                         need_visit[cur_available_node] = 1
-                    del key_dic[next_node]
             elif need_visit[next_node] == 3:
                 need_visit[next_node] = 2
     return sum(need_visit) == 0

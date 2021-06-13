@@ -30,7 +30,7 @@ def dc_find_maximum_subarray(arr: List[int], l, h):
 		right_sum += arr[right_idx]
 		mid_to_right_max_sum = max(right_sum, mid_to_right_max_sum)
 
-    left_max_sum = dc_find_maximum_subarray(arr, l, m)
+	left_max_sum = dc_find_maximum_subarray(arr, l, m)
 	right_max_sum = dc_find_maximum_subarray(arr, m + 1, h)
 
 	# 왼쪽, 오른쪽에서의 최대값과 가운데서 좌우로 진행했을 떄의 최대값 중 큰 값이 전체에서 큰 값

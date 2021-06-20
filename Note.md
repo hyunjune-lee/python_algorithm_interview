@@ -26,6 +26,21 @@
 
 1. 뭔가 충돌하거나 안에서부터 비교하는 거면 Stack 생각해보기
 
+# 알고리즘 중요한 팁들
+
+## lower bound
+
+```py
+start, end = 0, len(arr)
+while start < end:
+    mid = (start + end) // 2
+    if arr[mid] >= q_score:
+        end = mid
+    else:
+        start = mid + 1
+    answer.append(len(arr) - end)
+```
+
 # 알고리즘 소소한 팁들
 
 ```

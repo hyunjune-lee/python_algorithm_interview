@@ -1,3 +1,4 @@
+# 1시간 20분
 from itertools import combinations
 import re
 

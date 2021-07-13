@@ -22,12 +22,11 @@
 # ====================
 
 # [bin 사용.ver]
-def find_one_bit(reverse_bin):
-    for i, bit in enumerate(reverse_bin):
+def find_one_bit(num):
+    for i, bit in enumerate(bin(num)[::-1]):
         if bit == "1":
             print(i, end=" ")
-    return None
 
 
 for _ in range(T := int(input())):
-    find_one_bit(bin(int(input()))[::-1])
+    find_one_bit(int(input()))

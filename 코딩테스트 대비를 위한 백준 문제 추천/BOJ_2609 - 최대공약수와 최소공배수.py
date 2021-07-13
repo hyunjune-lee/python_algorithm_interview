@@ -10,36 +10,55 @@
 # [4. +한번에 맞추지 못한 경우 오답 원인 적기]
 #
 
-from collections import defaultdict
 
-
-def get_divsiors(num):
-    divsiors = defaultdict(int)
-    while num != 1:
-        for divisor in range(2, num + 1):
-            if num % divisor == 0:
-                num //= divisor
-                divsiors[divisor] += 1
-                break
-    return divsiors
-
-
-# [최대공배수와 두 수의 곱에서 계산.ver]
 def find_GCD_n_LCM(a, b):
-    a_divsiors = get_divsiors(a)
-    b_divsiors = get_divsiors(b)
-    GCD = 1
-    for num in a_divsiors.keys():
-        if b_divsiors[num] > 0:
-            GCD *= num ** min(a_divsiors[num], b_divsiors[num])
-    print(GCD)
-    print(LCM := a * b // GCD)
+    mul = a * b
+    while b > 0:
+        r = a % b
+        a = b
+        b = r
+    print(a)
+    print(mul // a)
 
 
 find_GCD_n_LCM(*map(int, input().split()))
 
 
-# [모두 약수에서 계산.ver]
+# [최대공배수와 두 수의 곱에서 계산.ver] =====
+# def get_divsiors(num):
+#     divsiors = defaultdict(int)
+#     while num != 1:
+#         for divisor in range(2, num + 1):
+#             if num % divisor == 0:
+#                 num //= divisor
+#                 divsiors[divisor] += 1
+#                 break
+#     return divsiors
+
+
+# def find_GCD_n_LCM(a, b):
+#     a_divsiors = get_divsiors(a)
+#     b_divsiors = get_divsiors(b)
+#     GCD = 1
+#     for num in a_divsiors.keys():
+#         if b_divsiors[num] > 0:
+#             GCD *= num ** min(a_divsiors[num], b_divsiors[num])
+#     print(GCD)
+#     print(LCM := a * b // GCD)
+# ===========================================
+
+
+# [모두 약수에서 계산.ver] ====================
+# def get_divsiors(num):
+#     divsiors = defaultdict(int)
+#     while num != 1:
+#         for divisor in range(2, num + 1):
+#             if num % divisor == 0:
+#                 num //= divisor
+#                 divsiors[divisor] += 1
+#                 break
+#     return divsiors
+
 # def find_GCD_n_LCM(a, b):
 #     a_divsiors = get_divsiors(a)
 #     b_divsiors = get_divsiors(b)
@@ -53,3 +72,4 @@ find_GCD_n_LCM(*map(int, input().split()))
 #     for num in nums:
 #         LCM *= num ** max(a_divsiors[num], b_divsiors[num])
 #     print(LCM)
+# ===========================================

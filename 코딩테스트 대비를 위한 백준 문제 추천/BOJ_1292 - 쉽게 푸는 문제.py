@@ -20,7 +20,7 @@ def easy_problem(a, b):
             nums[i] = delta_limit
             i += 1
 
-    return sum(nums[a : b + 1])
+    return sum(nums[a - 1 : b])
 
 
 print(easy_problem(*map(int, input().split())))

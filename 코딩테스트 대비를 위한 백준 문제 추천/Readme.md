@@ -42,14 +42,3 @@
 | 8    | [최소 스패닝 트리 ](https://www.acmicpc.net/problem/2693) | [풀이](https://github.com/hyunjune-lee/python_algorithm_interview/blob/main/%EC%BD%94%EB%94%A9%ED%85%8C%EC%8A%A4%ED%8A%B8%20%EB%8C%80%EB%B9%84%EB%A5%BC%20%EC%9C%84%ED%95%9C%20%EB%B0%B1%EC%A4%80%20%EB%AC%B8%EC%A0%9C%20%EC%B6%94%EC%B2%9C/BOJ_2693%20-%20N%EB%B2%88%EC%A7%B8%20%ED%81%B0%20%EC%88%98.py)                                                                                                                                                                                                                                                                                                                                                                                                                 | 🥇 골드 4 |
 | 9    | [부분 문자열 ](https://www.acmicpc.net/problem/1978)      | [풀이](https://github.com/hyunjune-lee/python_algorithm_interview/blob/main/%EC%BD%94%EB%94%A9%ED%85%8C%EC%8A%A4%ED%8A%B8%20%EB%8C%80%EB%B9%84%EB%A5%BC%20%EC%9C%84%ED%95%9C%20%EB%B0%B1%EC%A4%80%20%EB%AC%B8%EC%A0%9C%20%EC%B6%94%EC%B2%9C/BOJ_1978%20-%20%EC%86%8C%EC%88%98%20%EC%B0%BE%EA%B8%B0.py)                                                                                                                                                                                                                                                                                                                                                                                                                     | 🥇 골드 4 |
 | 10   | [줄 세우기 ](https://www.acmicpc.net/problem/1292)        | [풀이](https://github.com/hyunjune-lee/python_algorithm_interview/blob/main/%EC%BD%94%EB%94%A9%ED%85%8C%EC%8A%A4%ED%8A%B8%20%EB%8C%80%EB%B9%84%EB%A5%BC%20%EC%9C%84%ED%95%9C%20%EB%B0%B1%EC%A4%80%20%EB%AC%B8%EC%A0%9C%20%EC%B6%94%EC%B2%9C/BOJ_1292%20-%20%EC%89%BD%EA%B2%8C%20%ED%91%B8%EB%8A%94%20%EB%AC%B8%EC%A0%9C.py)                                                                                                                                                                                                                                                                                                                                                                                                | 🥇 골드 2 |
-
-연산자 끼워넣기 (🥈 실버 1티어)
-괄호의 값 (🥈 실버 2티어)
-빗물 (🥇 골드 5티어)
-가르침 (🥇 골드 5티어)
-멀티탭 스케줄링 (🥇 골드 2티어)
-부분합 (🥇골드 4티어)
-최소비용 구하기 (🥇 골드 5티어)
-최소 스패닝 트리 (🥇 골드 4티어)
-부분 문자열 (🥇 골드 4티어)
-줄 세우기 (🥇 골드 2티어)

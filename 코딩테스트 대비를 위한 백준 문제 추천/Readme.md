@@ -1,6 +1,6 @@
 # 📁BOJ-Algorithm
 
-- 백준 알고리즘 도장깨기👊🏻
+[![solved.ac tier](http://mazassumnida.wtf/api/v2/generate_badge?boj={aphlox})](https://solved.ac/{aphlox})
 
 ## 🛠Language
 

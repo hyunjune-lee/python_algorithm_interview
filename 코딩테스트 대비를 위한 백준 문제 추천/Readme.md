@@ -1,6 +1,6 @@
 # 📁BOJ-Algorithm
 
-[![solved.ac tier](http://mazassumnida.wtf/api/v2/generate_badge?boj={aphlox})](https://solved.ac/{aphlox})
+[![solved.ac tier](http://mazassumnida.wtf/api/v2/generate_badge?boj=aphlox)](https://solved.ac/aphlox)
 
 ## 🛠Language
 

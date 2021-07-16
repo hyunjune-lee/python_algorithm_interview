@@ -7,21 +7,51 @@ from typing import List
 import heapq
 
 def Dijkstra(self, edges: List[List[int]], start_node: int) -> int:
+    dist_list = defaultdict(lambda: float("inf"))
+    visited = defaultdict(lambda: False)
     graph = defaultdict(list)
     for u, v, w in edges:
         graph[u].append((v, w))
-
-    dist_list = defaultdict(int)
-    Q = [[(0, start_node)]]
+    Q = [(0, start_node)]
     while Q:
         dist, node = heapq.heappop(Q)
-        if node not in dist_list:
+        if not dist_list[node]:
             dist_list[node] = dist
+            visited[node] = True
             for next_node, add_dist in graph[node]:
-                alt_dist = dist + add_dist
-                heapq.heappush(Q, (alt_dist, next_node))
+                if not visited[next_node]:
+                    delta_dist = dist + add_dist
+                    heapq.heappush(Q, (delta_dist, next_node))
 
     return dist_list
+```
+
+```py
+from collections import defaultdict
+from typing import List
+import heapq
+
+
+def Dijkstra(self, edges: List[List[int]], start_node: int) -> int:
+    graph = defaultdict(list)
+    cost_list = defaultdict(lambda: float("inf"))
+    visited = defaultdict(lambda: False)
+
+    for u, v, w in edges:
+        graph[u].append((v, w))
+
+    q = [(0, S)]
+    visited[0] = True
+    while q:
+        cost, node = heapq.heappop(q)
+        visited[node] = True
+        cost_list[node] = cost
+        for next_node, add_cost in graph[node]:
+            if not visited[next_node]:
+                delta_cost = cost + add_cost
+                heapq.heappush(q, (delta_cost, next_node))
+    return cost_list[D]
+
 ```
 
 ## 과정

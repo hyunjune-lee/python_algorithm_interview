@@ -21,7 +21,8 @@ from itertools import combinations
 def solution(N, K, words):
     if K < 5:
         return 0
-
+    elif K >= 26:
+        return N
     total_set = set()
     word_set_list = list()
     for word in words:

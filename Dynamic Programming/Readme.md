@@ -1,5 +1,34 @@
 # Dynamic Programming
 
+## TIP
+
+### 한쪽 방향으로만 진행하게 하는 것
+
+#### 2차원일때 BOJ 점프에서
+
+```py
+for y in range(N):
+    for x in range(N):
+        ...
+
+```
+
+#### 중복 안되게 더할 떄
+
+BOJ_15989 - 1, 2, 3 더하기 4_2.py
+1를 먼저 쭉 더하고, 2 쭉 더하고, 3쭉 더하는 식
+
+```py
+def solution(n):
+    dp = [0 for _ in range(n + 1)]
+    dp[0] = 1
+
+    for add_num in [1, 2, 3]:
+        for x in range(add_num, n + 1):
+            dp[x] += dp[x - add_num]
+    return dp[n]
+```
+
 ## 전수조사(트리), 메모이제이션, 테뷸레이션 차이
 
 ```py

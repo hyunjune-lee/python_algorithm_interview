@@ -1,5 +1,49 @@
 # Dynamic Programming
 
+## 유형
+
+### 한쪽 방향으로 진행(카데인 알고리즘)
+
+BOJ_15486 - 퇴사 2.py
+
+### 앞뒤 분할 정복 메모이제이션
+
+BOJ_11049 - 행렬 곱셈 순서.py
+
+### 상태에 따른 메모이제이션
+
+BOJ_12996 - Acka.py
+BOJ_14238 - 출근 기록.py
+
+## TIP
+
+### 한쪽 방향으로만 진행하게 하는 것
+
+#### 2차원일때 BOJ 점프에서
+
+```py
+for y in range(N):
+    for x in range(N):
+        ...
+
+```
+
+#### 중복 안되게 더할 떄
+
+BOJ_15989 - 1, 2, 3 더하기 4_2.py
+1를 먼저 쭉 더하고, 2 쭉 더하고, 3쭉 더하는 식
+
+```py
+def solution(n):
+    dp = [0 for _ in range(n + 1)]
+    dp[0] = 1
+
+    for add_num in [1, 2, 3]:
+        for x in range(add_num, n + 1):
+            dp[x] += dp[x - add_num]
+    return dp[n]
+```
+
 ## 전수조사(트리), 메모이제이션, 테뷸레이션 차이
 
 ```py

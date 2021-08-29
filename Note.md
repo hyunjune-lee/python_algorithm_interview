@@ -45,6 +45,8 @@ def binary_search(score_list, score):
     return
 
 
+# 여기서 lower bound는 idx 1이다.(2가 제일 처음 나타나는 위치)
+# 여기서 upper bound는 idx 4이다. (2 초과한 값이 처음 나타나는 위치)
 print(binary_search([1, 2, 2, 2, 4, 8, 12], 2))
 ```
 

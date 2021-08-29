@@ -163,3 +163,14 @@ WIS는 n에서 n − 1
 
 - 시간복잡도 O(n^3) (모든 쌍에 대해서 구해주기 때문에 Bellman-Ford알고리즘을 n번 호출하는 것보다 효율적임)
 - 음의 주기가 있으면 안됨(그래도 음의 주기를 체크해주긴함)
+- k i j 순서 중요!!! (i j k 순서로 하면 제대로 안됨)
+
+```py
+def find_shortest_path_by_floyd(n, mat):
+    for k in range(1, n + 1):
+        for i in range(1, n + 1):
+            for j in range(1, n + 1):
+                if mat[i][j] > mat[i][k] + mat[k][j]:
+                    mat[i][j] = mat[i][k] + mat[k][j]
+                    table[i][j] = k
+```

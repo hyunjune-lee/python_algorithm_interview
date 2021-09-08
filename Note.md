@@ -37,8 +37,7 @@ def binary_search(score_list, score):
     l, r = 0, len(score_list)
     while l < r:
         mid = (l + r) // 2
-        print(l, r, mid)
-        if score_list[mid] >= score:
+        if score <= score_list[mid] :
             r = mid
         else:
             l = mid + 1
@@ -53,15 +52,14 @@ print(binary_search([1, 2, 2, 2, 4, 8, 12], 2))
 ## Upper bound
 
 lower bound는 찾고자 하는 값 이상이 처음으로 나타나는 위치인 반면에, upper bound는 찾고자 하는 값보다 큰 값이 처음으로 나타나는 위치입니다.
-`if score_list[mid] > score:` 에서 > 이면 upper bound, >= 이면 lower bound
+`if score < score_list[mid]` 에서 < 이면 upper bound, <= 이면 lower bound
 
 ```py
 def binary_search(score_list, score):
     l, r = 0, len(score_list)
     while l < r:
         mid = (l + r) // 2
-        print(l, r, mid)
-        if score_list[mid] > score:
+        if score < score_list[mid] :
             r = mid
         else:
             l = mid + 1
@@ -71,9 +69,16 @@ def binary_search(score_list, score):
 print(binary_search([1, 2, 2, 2, 4, 8, 12], 2))
 ```
 
+## 누적합에서 값 구하기..
+
+카카오 광고시간, 튜플 문제에서..
+
 # 알고리즘 소소한 팁들
 
+## 1. eval를 사용하면 있는 그대로 활용할 수 있다.
+
 ```
+
 # 패킹할때 매개변수 앞에 *을 붙여서 한다.
 # Python 3.7 이상의 버전부터 dictionary는 "key"값을 넣는 순서를 기억한다. 따라서, dict을 이용해서 가장 간단한 방법으로 리스트의 중복을 제거하면서 기존 리스트의 순서를 유지할 수 있다. [6,7]
 

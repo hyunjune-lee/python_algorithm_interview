@@ -37,24 +37,3 @@ def solution(k, room_number):
 
 
 print(solution(10, [1, 3, 4, 1, 3, 1]))
-
-
-# def solution(k, room_number):
-#     visited_room = dict()
-#     res = []
-#     for room in room_number:
-#         if room not in visited_room:
-#             visited_room[room] = [room + 1]
-#             res.append(room)
-#         else:
-#             next_room_pos = [room]
-#             while room in visited_room:
-#                 temp = visited_room[room][0]
-#                 visited_room[room] = next_room_pos
-#                 room = temp
-
-#             next_room_pos[0] = room
-#             visited_room[room] = [room + 1]
-#             res.append(room)
-
-#     return res

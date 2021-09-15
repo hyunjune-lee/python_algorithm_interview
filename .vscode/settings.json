@@ -1,4 +1,5 @@
 {
   "terminal.integrated.defaultProfile.windows": "Command Prompt",
-  "powermode.enabled": true
+  "terminal.integrated.automationShell.windows": "${env:windir}\\System32\\cmd.exe",
+
 }

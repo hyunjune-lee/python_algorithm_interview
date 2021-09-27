@@ -117,6 +117,10 @@ f = sorted(e, key = lambda x : (x[0], -x[1]))
 
 출처 : https://dailyheumsi.tistory.com/67
 ```
+## 입력 빠르게 받기
+import sys
+input = sys.stdin.readline
+
 
 ## 파이썬 중복 제거
 

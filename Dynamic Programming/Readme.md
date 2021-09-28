@@ -138,9 +138,20 @@ else:
 #### 2차원일때 BOJ 점프에서
 
 ```py
+# 가는 방향이 고정되어있으므로 맨위쪽위부터 오른쪽으로,
+# 그리고 아래 줄 이렇게 진행해서 진행 경로의 수가 적힌 dp_board를 만나면
+# 해당 경로에서 그 숫자만큼 오른쪽, 아래에 dp_board 에 현재 적힌 경로의 수 만큼 더해준다.
 for y in range(N):
     for x in range(N):
-        ...
+        if dp_board[y][x] and board[y][x]:
+            jump_dist = board[y][x]
+            # 오른쪽
+            if x + jump_dist < N:
+                dp_board[y][x + jump_dist] += dp_board[y][x]
+            # 아래쪽
+            if y + jump_dist < N:
+                dp_board[y + jump_dist][x] += dp_board[y][x]
+return dp_board[N - 1][N - 1]
 
 ```
 

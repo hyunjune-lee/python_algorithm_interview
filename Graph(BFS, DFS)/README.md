@@ -8,7 +8,7 @@
 4. 갱신된 visited를 반환한다.
 
 ```py
-def recursive_dfs()(v, visited = []):
+def recursive_dfs(v, visited = []):
     visited.append(v)
     for w in graph[v]:
         if not w in visited:
@@ -21,7 +21,7 @@ def recursive_dfs()(v, visited = []):
 ### extend ver.
 
 ```py
-def iterative_dfs()(start_v):
+def iterative_dfs(start_v):
     visited = []
     stack = [start_v]
 
@@ -42,7 +42,7 @@ def iterative_dfs()(start_v):
 ### extend ver.
 
 ```py
-def iterative_bfs()(grahp, start_v):
+def iterative_bfs(grahp, start_v):
     visited = []
     queue = [start_v]
 

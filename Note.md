@@ -29,6 +29,10 @@
 
 # 알고리즘 중요한 팁들
 
+## lower bound, upper bound
+미리 정렬되어 있어야 가능
+r은 인덱스 포함하지 않음을 뜻함
+
 ## lower bound
 
 lower bound는 찾고자 하는 값 이상이 처음 나타나는 위치
@@ -50,7 +54,7 @@ def binary_search(score_list, score):
 print(binary_search([1, 2, 2, 2, 4, 8, 12], 2))
 ```
 
-## Upper bound
+## upper bound
 
 lower bound는 찾고자 하는 값 이상이 처음으로 나타나는 위치인 반면에, upper bound는 찾고자 하는 값보다 큰 값이 처음으로 나타나는 위치입니다.
 `if score < score_list[mid]` 에서 < 이면 upper bound, <= 이면 lower bound
